@@ -1,0 +1,27 @@
+{
+  "name": "generator-kj",
+  "version": "0.0.1",
+  "description": "A yeoman generator for the kj framework.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronelliott/generator-kj.git"
+  },
+  "keywords": [
+    "webapp",
+    "framework",
+    "kj",
+    "yeoman-generator"
+  ],
+  "files": [
+    "app"
+  ],
+  "author": "Ron Elliott <ronaldbelliott@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronelliott/generator-kj/issues"
+  },
+  "homepage": "https://github.com/ronelliott/generator-kj#readme",
+  "dependencies": {
+    "yeoman-generator": "^0.22.5"
+  }
+}
