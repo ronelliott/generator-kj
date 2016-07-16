@@ -1,6 +1,6 @@
 {
   "name": "generator-kj",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A yeoman generator for the kj framework.",
   "repository": {
     "type": "git",
