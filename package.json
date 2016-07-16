@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/ronelliott/generator-kj#readme",
   "dependencies": {
-    "yeoman-generator": "^0.22.5"
+    "yeoman-generator": "^0.22.6"
   }
 }
