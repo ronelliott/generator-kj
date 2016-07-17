@@ -44,16 +44,36 @@ module.exports = generators.Base.extend({
 
         writeFiles: function() {
             this.fs.copyTpl(
-                this.templatePath('config/base.js'),
-                this.destinationPath('config/base.js'));
+                this.templatePath('config/_base.js'),
+                this.destinationPath('config/_base.js'));
 
             this.fs.copyTpl(
-                this.templatePath('config/dev.js'),
-                this.destinationPath('config/dev.js'));
+                this.templatePath('config/_dev.js'),
+                this.destinationPath('config/_dev.js'));
 
             this.fs.copyTpl(
-                this.templatePath('config/prod.js'),
-                this.destinationPath('config/prod.js'));
+                this.templatePath('config/_prod.js'),
+                this.destinationPath('config/_prod.js'));
+
+            this.fs.copyTpl(
+                this.templatePath('config/handlers.js'),
+                this.destinationPath('config/handlers.js'));
+
+            this.fs.copyTpl(
+                this.templatePath('config/initializers.js'),
+                this.destinationPath('config/initializers.js'));
+
+            this.fs.copyTpl(
+                this.templatePath('config/resources.js'),
+                this.destinationPath('config/resources.js'));
+
+            this.fs.copyTpl(
+                this.templatePath('config/routes.js'),
+                this.destinationPath('config/routes.js'));
+
+            this.fs.copyTpl(
+                this.templatePath('config/services.js'),
+                this.destinationPath('config/services.js'));
 
             this.fs.copyTpl(
                 this.templatePath('routes/main.js'),

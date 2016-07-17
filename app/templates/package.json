@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "kj --config=./config/dev.js"
+    "run-dev": "./node_modules/.bin/kj run --config=./config/_dev.js",
+    "run-prod": "./node_modules/.bin/kj run --config=./config/_prod.js",
+    "start": "npm run run-prod"
   }
 }

@@ -1,24 +1,5 @@
 'use strict';
 
-var path = require('path'),
-    reflekt = require('reflekt');
-
-function routes(name, base) {
-    base = base || '';
-    var mod = require(path.resolve(__dirname, '..', 'routes', name));
-
-    return function($$caller, callback) {
-        $$caller(mod, null, {
-            callback: callback,
-            url: function(sub) {
-                return base + sub;
-            }
-        });
-
-        !reflekt.has(mod, 'callback') && callback();
-    };
-}
-
 module.exports = {
     host: process.env.HOST || '0.0.0.0',
     port: process.env.PORT || 3000,
@@ -27,7 +8,9 @@ module.exports = {
             enabled: true,
             path: 'views',
         }),
-        require('kj-handler-view'),
+        require('./handlers'),
+        require('./resources'),
+        require('./services'),
         require('kj-logger-winston')({
             loggers: {
                 app: {
@@ -68,6 +51,7 @@ module.exports = {
                 }
             }
         }),
-        routes('main'),
+        require('./initializers'),
+        require('./routes'),
     ],
 };
